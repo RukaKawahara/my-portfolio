@@ -28,8 +28,6 @@ Thumbs.db
 # Claude Code
 .claude/
 
-# 個人データ（portfolio.sample.tsをコピーして使う）
-data/portfolio.ts
 
 # TypeScript
 *.tsbuildinfo
