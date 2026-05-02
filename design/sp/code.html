@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#cac1e8",
+                    "tertiary": "#605a7c",
+                    "surface-dim": "#e0d8d8",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#faf2f2",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed": "#b2f2bb",
+                    "surface": "#fff8f8",
+                    "on-secondary-fixed-variant": "#145129",
+                    "primary-container": "#ffd1dc",
+                    "on-secondary-container": "#357044",
+                    "on-primary-container": "#7a5761",
+                    "surface-bright": "#fff8f8",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary": "#2f6a3f",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#e7bbc6",
+                    "outline-variant": "#d3c3c5",
+                    "tertiary-fixed": "#e6deff",
+                    "surface-container-high": "#efe6e7",
+                    "on-tertiary-container": "#635c7e",
+                    "surface-container": "#f4ecec",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#96d5a0",
+                    "on-secondary": "#ffffff",
+                    "on-surface": "#1e1b1b",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed": "#ffd9e2",
+                    "on-tertiary-fixed-variant": "#484263",
+                    "on-primary-fixed-variant": "#5e3e47",
+                    "on-background": "#1e1b1b",
+                    "outline": "#817476",
+                    "secondary-container": "#b2f2bb",
+                    "background": "#fff8f8",
+                    "tertiary-container": "#e1d8ff",
+                    "inverse-on-surface": "#f7efef",
+                    "inverse-surface": "#332f30",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e9e0e1",
+                    "on-secondary-fixed": "#00210b",
+                    "surface-variant": "#e9e0e1",
+                    "primary-fixed-dim": "#e7bbc6",
+                    "on-tertiary-fixed": "#1c1735",
+                    "on-surface-variant": "#4f4446",
+                    "primary": "#78555e",
+                    "on-primary-fixed": "#2d141c",
+                    "surface-tint": "#78555e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "48px",
+                    "margin-mobile": "20px",
+                    "stack-md": "24px",
+                    "stack-sm": "12px",
+                    "unit": "8px",
+                    "container-max": "1140px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "h3": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "label-caps": ["Space Grotesk"],
+                    "h1": ["Plus Jakarta Sans"],
+                    "code": ["Space Grotesk"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "code": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .neomorph-card {
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.03), -6px -6px 20px rgba(255, 255, 255, 0.8);
+        }
+        .neomorph-inset {
+            box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.02), inset -4px -4px 10px rgba(255, 255, 255, 0.9);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-3 max-w-7xl mx-auto bg-[#F8F9FA] dark:bg-slate-900 rounded-full mt-4 mx-4 shadow-sm shadow-[6px_6px_20px_rgba(0,0,0,0.03),-6px_-6px_20px_rgba(255,255,255,0.8)]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a friendly female software engineer with a soft, warm smile. She is in a brightly lit studio with a soft-focus background of a modern tech workspace. The image has a clean, high-key light-mode aesthetic with subtle pastel pink and mint color grading, matching the adult-kawaii professional style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUL-1ZpdFs5wkJDvGwYcislj9VPlyaS0wkTwE3rlcb7GDIDzuTr-34ThxuxHjiMatoFk-AJjTqWyK0xaYOAzwhtXPwRrBczm8k5mnlVjDxwys7a1Fq08-ClSGTjsDEZAl8wqYWAVMNpJBm4jdSrwEGvY1MW2GVi2Z5DH6-Vcy87DlT6G-H_XYWYdjidPwaDSCAAJ7zX-rTJqQOX8wOHfkxvSdSLZMtS9LWQ1ocTqcl48Tm2vdDE7RVMrwDmIZHcOpfokOH6FBGLjY"/>
+</div>
+<span class="text-lg font-extrabold tracking-tighter text-slate-800 dark:text-slate-100 font-['Plus_Jakarta_Sans']">DevKawaii</span>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full active:scale-95 transition-transform text-pink-400 dark:text-pink-300">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<main class="pt-24 pb-12 px-5 max-w-md mx-auto space-y-20">
+<!-- Section 1: Hero -->
+<section class="flex flex-col items-center text-center" id="hero">
+<div class="relative mb-8">
+<div class="w-32 h-32 rounded-full neomorph-card bg-white p-2">
+<div class="w-full h-full rounded-full overflow-hidden border-4 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="A close-up portrait of a creative professional developer with a bright and approachable expression. The person is set against a minimalist, pastel-colored background that reflects a professional yet cute aesthetic. Soft, natural lighting highlights clear features and a positive vibe, aligned with a high-trust, modern software engineering personality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6cRey0L4MPgCApWA9YvjZ42us0Cl0OoctYYIqLWjXc8VMldQeFj443yyYsywu5xrIST9OQd3veh27H2T_KNYvRMozgdF7g2YH73QA7dj_43BWSb5gyHrYIiYRusvA123h9Bd6BXDPZs30bndKoJTi5LEi7cSz-FBKP6g6TmjX4gaHZ2397RV4Zic-o7_ZRGwQNmzkISFZJaufBXkKoKKWqsRTMVGZHBUPrortLGd1tEk0CS4mnheb1ImvaHaCo7zHvXcTF-ZSnSk"/>
+</div>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-caps neomorph-card">
+                    OPEN TO WORK
+                </div>
+</div>
+<h1 class="font-h1 text-[36px] leading-tight mb-4 text-primary">
+                こんにちは、<br/>はじめまして！
+            </h1>
+<p class="font-body-md text-on-surface-variant mb-8 px-4">
+                モダンなUIとクリーンなコードで、<br/>心地よいデジタル体験を創造するエンジニアです。
+            </p>
+<div class="flex flex-col w-full gap-4 px-6">
+<button class="bg-primary text-on-primary py-4 rounded-full font-h3 text-body-md shadow-lg active:scale-95 transition-transform">
+                    プロジェクトを見る
+                </button>
+<button class="border-2 border-secondary text-secondary py-4 rounded-full font-h3 text-body-md active:scale-95 transition-transform bg-white/50">
+                    お問い合わせ
+                </button>
+</div>
+</section>
+<!-- Section 2: About -->
+<section class="space-y-6" id="about">
+<h2 class="font-h2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="face">face</span>
+                About Me
+            </h2>
+<div class="bg-white neomorph-card rounded-xl p-8 space-y-6">
+<p class="font-body-md leading-relaxed text-on-surface">
+                    技術を「可愛く、美しく、使いやすく」することをモットーに活動しています。機能性だけでなく、触れた瞬間のワクワク感を大切にしています。
+                </p>
+<div class="grid grid-cols-1 gap-4">
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-white/40">
+<span class="material-symbols-outlined text-pink-400 text-3xl" data-icon="auto_awesome">auto_awesome</span>
+<div>
+<h4 class="font-h3 text-[16px]">Clean Code</h4>
+<p class="text-[14px] text-on-surface-variant">保守性が高く、読みやすいコードを追求します。</p>
+</div>
+</div>
+<div class="flex items-start gap-4 p-4 rounded-lg bg-surface-container-low border border-white/40">
+<span class="material-symbols-outlined text-secondary" data-icon="palette">palette</span>
+<div>
+<h4 class="font-h3 text-[16px]">Modern UI</h4>
+<p class="text-[14px] text-on-surface-variant">最新のデザイントレンドを取り入れた実装が得意です。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Skills -->
+<section class="space-y-6" id="skills">
+<h2 class="font-h2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="psychology">psychology</span>
+                Skills
+            </h2>
+<div class="space-y-4">
+<!-- Frontend -->
+<div class="bg-white neomorph-card rounded-xl p-6">
+<h3 class="font-h3 text-[18px] mb-4 text-primary-container bg-primary px-4 py-1 inline-block rounded-full">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-label-caps text-[11px]">React / Next.js</span>
+<span class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-label-caps text-[11px]">TypeScript</span>
+<span class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-label-caps text-[11px]">Tailwind CSS</span>
+<span class="px-4 py-2 rounded-full bg-primary-container text-on-primary-container text-label-caps text-[11px]">Framer Motion</span>
+</div>
+</div>
+<!-- Backend -->
+<div class="bg-white neomorph-card rounded-xl p-6">
+<h3 class="font-h3 text-[18px] mb-4 text-on-secondary-container bg-secondary-container px-4 py-1 inline-block rounded-full">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-secondary-container text-label-caps text-[11px]">Node.js</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-secondary-container text-label-caps text-[11px]">PostgreSQL</span>
+<span class="px-4 py-2 rounded-full bg-secondary-container/50 text-on-secondary-container text-label-caps text-[11px]">GraphQL</span>
+</div>
+</div>
+<!-- Infra -->
+<div class="bg-white neomorph-card rounded-xl p-6">
+<h3 class="font-h3 text-[18px] mb-4 text-on-tertiary-container bg-tertiary-container px-4 py-1 inline-block rounded-full">Infra</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 rounded-full bg-tertiary-container/50 text-on-tertiary-container text-label-caps text-[11px]">AWS</span>
+<span class="px-4 py-2 rounded-full bg-tertiary-container/50 text-on-tertiary-container text-label-caps text-[11px]">Docker</span>
+<span class="px-4 py-2 rounded-full bg-tertiary-container/50 text-on-tertiary-container text-label-caps text-[11px]">Vercel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Projects -->
+<section class="space-y-6" id="projects">
+<h2 class="font-h2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="architecture">architecture</span>
+                Projects
+            </h2>
+<div class="space-y-8">
+<!-- Project 1 -->
+<div class="bg-white neomorph-card rounded-xl overflow-hidden">
+<div class="h-48 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A screen mockup of a sleek, minimalist software application interface displayed on a high-end laptop. The UI features soft pastels, plenty of whitespace, and rounded buttons, consistent with a professional kawaii aesthetic. The setting is a cozy, modern home office with warm ambient lighting and soft textures, creating a sense of quality and comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhIBDWJLL4NqdzLGFqAwUQNQC3H9yNymDegaJ-vXgGpJVUFX9wahZeYR9A7hJUeeexYl6WdThJHXbhMeeVsYlVTVZEWaY9wEB4V1gszVh_wVL5LjgltwtvwHxT4MAPVP7Il69WQgAVEMV71XMO9J65uXx9C-EPBmLi1eXzz4G3amlKBPkWpNatOcwjM8g3_Yt8FwBtIQGEm7UQ5QGGPtJJ0guN6ufbLRZYNSYowhqUHIggGTc33MWT75GnUJV7n2gHEM2RWHkuXps"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-primary">Web App</div>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-[20px] mb-2">Kawaii Planner</h3>
+<p class="text-[14px] text-on-surface-variant mb-4">タスク管理を楽しくする、パステルカラーのTodoアプリ。ゲーミフィケーション要素を取り入れています。</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[11px] font-code text-primary bg-primary-container/20 px-2 py-1 rounded">Next.js</span>
+<span class="text-[11px] font-code text-secondary bg-secondary-container/20 px-2 py-1 rounded">Firebase</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="bg-white neomorph-card rounded-xl overflow-hidden">
+<div class="h-48 w-full overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A clean and artistic code editor screen showing elegant lines of code with a light-mode, pastel-toned syntax highlighting theme. The laptop is placed on a pristine white desk with a small succulent and a ceramic mug nearby. The overall atmosphere is peaceful and focused, emphasizing clean software craftsmanship and high-quality design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzAXHkGwssSXUlFmFHoiVd_Prcvb9ztgNly80W_zYmRD2sD_XWQACRRDY1P6KO84nz_SJ_gr3xFtwFA-xvmOfBaLFV1Jdf3L794p_3568zIEnhVURRaZvAsdy0n2lJt4ChoIXpVXLFjO2xpu6H6bRFZx6isbosIKjuEh-8_83r89Ku2BTrwWzp0TV_0HtyggjlIqZ835u44NUUeK926oq4LRTNB5IgIGkkkz2eVslsLR8X5VzRIUBFPV5w-5RRcBSjzXsaJQRweZA"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-secondary">Library</div>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-[20px] mb-2">Minty CSS Components</h3>
+<p class="text-[14px] text-on-surface-variant mb-4">軽量でアクセシブルな、ミントカラーを基調としたUIコンポーネントライブラリ。</p>
+<div class="flex flex-wrap gap-2">
+<span class="text-[11px] font-code text-primary bg-primary-container/20 px-2 py-1 rounded">Vanilla JS</span>
+<span class="text-[11px] font-code text-secondary bg-secondary-container/20 px-2 py-1 rounded">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Career -->
+<section class="space-y-6" id="career">
+<h2 class="font-h2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="work_history">work_history</span>
+                Career
+            </h2>
+<div class="relative pl-8 space-y-12 before:content-[''] before:absolute before:left-[11px] before:top-0 before:bottom-0 before:w-0.5 before:bg-pink-100">
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-white neomorph-card"></div>
+<span class="text-label-caps text-secondary mb-1 block">2022 - Present</span>
+<h3 class="font-h3 text-[18px]">Senior Frontend Engineer</h3>
+<p class="text-[14px] text-on-surface-variant">Creative Agency "Sparkle Tech"</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-pink-300 border-4 border-white"></div>
+<span class="text-label-caps text-secondary mb-1 block">2020 - 2022</span>
+<h3 class="font-h3 text-[18px]">Fullstack Developer</h3>
+<p class="text-[14px] text-on-surface-variant">Indie Startup Lab</p>
+</div>
+<div class="relative">
+<div class="absolute -left-[29px] top-1 w-5 h-5 rounded-full bg-pink-200 border-4 border-white"></div>
+<span class="text-label-caps text-secondary mb-1 block">2018 - 2020</span>
+<h3 class="font-h3 text-[18px]">UI/UX Designer &amp; Dev</h3>
+<p class="text-[14px] text-on-surface-variant">Free Agents Network</p>
+</div>
+</div>
+</section>
+<!-- Section 6: Contact -->
+<section class="space-y-6" id="contact">
+<h2 class="font-h2 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+                Contact
+            </h2>
+<div class="bg-white neomorph-card rounded-[32px] p-8 space-y-6">
+<p class="text-[14px] text-center text-on-surface-variant mb-4">お仕事の依頼やご相談など、<br/>お気軽にお問い合わせください！</p>
+<form class="space-y-4">
+<div>
+<input class="w-full neomorph-inset bg-[#F8F9FA] border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary-container outline-none transition-all placeholder:text-slate-400" placeholder="お名前" type="text"/>
+</div>
+<div>
+<input class="w-full neomorph-inset bg-[#F8F9FA] border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary-container outline-none transition-all placeholder:text-slate-400" placeholder="メールアドレス" type="email"/>
+</div>
+<div>
+<textarea class="w-full neomorph-inset bg-[#F8F9FA] border-none rounded-[24px] px-6 py-4 focus:ring-2 focus:ring-primary-container outline-none transition-all placeholder:text-slate-400" placeholder="メッセージ" rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-primary py-4 rounded-full font-h3 text-body-md shadow-lg active:scale-95 transition-transform" type="submit">
+                        送信する
+                    </button>
+</form>
+<div class="flex justify-center gap-6 pt-4">
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-white neomorph-card text-primary active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-white neomorph-card text-primary active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="link">link</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-white neomorph-card text-primary active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row items-center justify-between gap-6 max-w-7xl mx-auto rounded-t-[48px] border-t border-slate-100 dark:border-slate-800 bg-transparent">
+<div class="text-center md:text-left">
+<span class="font-bold text-slate-800 font-['Plus_Jakarta_Sans'] text-lg">DevKawaii</span>
+<p class="font-['Plus_Jakarta_Sans'] text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500 mt-2">© 2024 DevKawaii • Made with sparkles and code</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-pink-400 transition-colors" href="#">GitHub</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-pink-400 transition-colors" href="#">LinkedIn</a>
+<a class="font-['Plus_Jakarta_Sans'] text-xs font-medium uppercase tracking-widest text-slate-400 dark:text-slate-500 hover:text-pink-400 transition-colors" href="#">Twitter</a>
+</div>
+</footer>
+</body></html>

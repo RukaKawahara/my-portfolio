@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;family=Space+Grotesk:wght@500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#1c1735",
+                    "on-tertiary-fixed-variant": "#484263",
+                    "on-surface": "#1e1b1b",
+                    "surface-tint": "#78555e",
+                    "outline": "#817476",
+                    "outline-variant": "#d3c3c5",
+                    "on-tertiary": "#ffffff",
+                    "surface": "#fff8f8",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#4f4446",
+                    "inverse-surface": "#332f30",
+                    "surface-container-high": "#efe6e7",
+                    "on-secondary-container": "#357044",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#605a7c",
+                    "primary": "#78555e",
+                    "primary-container": "#ffd1dc",
+                    "surface-dim": "#e0d8d8",
+                    "secondary-container": "#b2f2bb",
+                    "on-primary-fixed-variant": "#5e3e47",
+                    "error-container": "#ffdad6",
+                    "inverse-primary": "#e7bbc6",
+                    "secondary-fixed": "#b2f2bb",
+                    "surface-container-low": "#faf2f2",
+                    "on-primary-fixed": "#2d141c",
+                    "primary-fixed-dim": "#e7bbc6",
+                    "background": "#fff8f8",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e9e0e1",
+                    "secondary-fixed-dim": "#96d5a0",
+                    "on-primary-container": "#7a5761",
+                    "inverse-on-surface": "#f7efef",
+                    "surface-variant": "#e9e0e1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#e1d8ff",
+                    "surface-bright": "#fff8f8",
+                    "tertiary-fixed-dim": "#cac1e8",
+                    "on-secondary-fixed-variant": "#145129",
+                    "tertiary-fixed": "#e6deff",
+                    "on-background": "#1e1b1b",
+                    "secondary": "#2f6a3f",
+                    "surface-container": "#f4ecec",
+                    "on-tertiary-container": "#635c7e",
+                    "on-secondary-fixed": "#00210b",
+                    "primary-fixed": "#ffd9e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "stack-lg": "48px",
+                    "stack-sm": "12px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "container-max": "1140px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-caps": ["Space Grotesk"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "h2": ["Plus Jakarta Sans"],
+                    "h3": ["Plus Jakarta Sans"],
+                    "code": ["Space Grotesk"],
+                    "h1": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "h2": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "700"}],
+                    "code": ["14px", {"lineHeight": "1.5", "fontWeight": "500"}],
+                    "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #F8F9FA; }
+        .neo-soft {
+            box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.03), -6px -6px 20px rgba(255, 255, 255, 0.8);
+        }
+        .neo-soft-inset {
+            box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.02), inset -4px -4px 10px rgba(255, 255, 255, 0.8);
+        }
+        .neo-hover:hover {
+            box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.04), -8px -8px 25px rgba(255, 255, 255, 0.9);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<header class="sticky top-0 w-full z-50 bg-white/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(0,209,255,0.1)]">
+<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-xl font-black text-primary uppercase tracking-widest font-label-caps">TECH_ARCHIVE</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-500 font-label-caps hover:text-primary transition-all duration-300 rounded-lg py-1 px-3" href="#projects">Projects</a>
+<a class="text-slate-500 font-label-caps hover:text-primary transition-all duration-300 rounded-lg py-1 px-3" href="#experience">Experience</a>
+<a class="text-slate-500 font-label-caps hover:text-primary transition-all duration-300 rounded-lg py-1 px-3" href="#stack">Stack</a>
+<a class="text-slate-500 font-label-caps hover:text-primary transition-all duration-300 rounded-lg py-1 px-3" href="#contact">Contact</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-caps font-bold active:scale-95 transition-transform neo-soft">Resume</button>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</nav>
+</header>
+<main class="max-w-7xl mx-auto px-6">
+<section class="py-24 md:py-32 flex flex-col md:flex-row items-center gap-12" id="hero">
+<div class="flex-1 space-y-6">
+<div class="inline-block px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-label-caps font-bold">
+                    WELCOME TO MY PORTFOLIO
+                </div>
+<h1 class="font-h1 text-h1 text-on-surface leading-tight">
+                    こんにちは、<br/>
+<span class="text-primary">Software Engineer</span> です。
+                </h1>
+<p class="text-body-lg text-on-surface-variant max-w-xl">
+                    技術の力で、毎日の生活を少しだけ「楽しく」「便利に」。
+                    清潔感のあるコードと、心地よいユーザー体験を大切にしています。
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold neo-soft hover:scale-105 transition-all">プロジェクトを見る</button>
+<button class="border-2 border-tertiary text-tertiary px-8 py-4 rounded-full font-bold hover:bg-tertiary-container/20 transition-all">お問い合わせ</button>
+</div>
+</div>
+<div class="flex-1 flex justify-center">
+<div class="relative w-80 h-80 md:w-96 md:h-96">
+<div class="absolute inset-0 bg-primary-container rounded-xl transform rotate-6 scale-95 opacity-50"></div>
+<div class="absolute inset-0 bg-tertiary-container rounded-xl transform -rotate-3 scale-95 opacity-50"></div>
+<img class="relative z-10 w-full h-full object-cover rounded-xl neo-soft" data-alt="A professional yet friendly headshot of a software engineer smiling warmly. The setting is a bright, airy home office with soft natural light filtering through nearby plants, creating a calm and welcoming atmosphere. The overall visual style is clean and high-key, aligning with a light-mode modern UI. The person is wearing a simple pastel-toned sweater that fits the adult-kawaii aesthetic perfectly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmjuRhlEb9juf99SjKD5boWKFE7_ipSvM4omDyYkJt7BRg4dXdgDwJwFMg8UzjboPvKneM598R2txBhdxY8Tr40oY2FqbUMAMeKF1VdzR_49mI2pgScvhBfn2jH8yFprVct8kyQEiC-cgGt1v0LHZD5wVLJPZCmM1magYK--ZiUGGxbU4cWS1YntyAsVNcDtqVCu7g3xSPIt9gDreBYaVe9tUrHIFtjcm6rMBAA3CDlsy6eguO6XdE8FzmwFykeDclvq8u-15IoQ4"/>
+</div>
+</div>
+</section>
+<section class="py-24" id="about">
+<div class="bg-white rounded-xl p-12 neo-soft flex flex-col md:flex-row gap-12">
+<div class="flex-1">
+<h2 class="font-h2 text-h2 text-on-surface mb-8 border-l-8 border-primary-container pl-6">自己紹介</h2>
+<p class="text-body-md text-on-surface-variant leading-relaxed mb-6">
+                        都内を中心に活動しているソフトウェアエンジニアです。大学卒業後、SIerでの経験を経て、現在はWebサービス開発に携わっています。
+                    </p>
+<p class="text-body-md text-on-surface-variant leading-relaxed">
+                        「技術のための技術」ではなく、「使う人のための技術」であることを常に念頭に置き、アクセシビリティやパフォーマンス、そして何より使い心地の良いUIの実装を得意としています。
+                    </p>
+</div>
+<div class="flex-1 grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container rounded-lg neo-soft-inset flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-2">code</span>
+<span class="font-bold text-on-surface">Clean Code</span>
+</div>
+<div class="p-6 bg-surface-container rounded-lg neo-soft-inset flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-2">auto_awesome</span>
+<span class="font-bold text-on-surface">Modern UI</span>
+</div>
+<div class="p-6 bg-surface-container rounded-lg neo-soft-inset flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-2">groups</span>
+<span class="font-bold text-on-surface">Team Player</span>
+</div>
+<div class="p-6 bg-surface-container rounded-lg neo-soft-inset flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-on-primary-container text-4xl mb-2">rocket_launch</span>
+<span class="font-bold text-on-surface">Growth</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24" id="stack">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-on-surface">スキルセット</h2>
+<p class="text-on-surface-variant mt-4">最新の技術スタックをバランスよく活用しています</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-xl neo-soft">
+<div class="w-12 h-12 bg-primary-container flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined text-on-primary-container">layers</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Frontend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container rounded-full text-code">React</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container rounded-full text-code">Next.js</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container rounded-full text-code">TypeScript</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container rounded-full text-code">TailwindCSS</span>
+<span class="px-3 py-1 bg-primary-container/30 text-on-primary-container rounded-full text-code">Vue.js</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl neo-soft">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">database</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Backend</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-code">Node.js</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-code">Go</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-code">PostgreSQL</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-code">GraphQL</span>
+<span class="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full text-code">Redis</span>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl neo-soft">
+<div class="w-12 h-12 bg-tertiary-container flex items-center justify-center rounded-full mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container">cloud_queue</span>
+</div>
+<h3 class="font-h3 text-h3 mb-4">Infra / Tool</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-code">AWS</span>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-code">Docker</span>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-code">GitHub Actions</span>
+<span class="px-3 py-1 bg-tertiary-container/30 text-on-tertiary-container rounded-full text-code">Terraform</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24" id="projects">
+<h2 class="font-h2 text-h2 text-on-surface mb-12 text-center">制作実績</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden neo-soft mb-6 aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A clean and modern dashboard interface of a data analytics tool. The UI features soft rounded corners, pastel-toned charts, and a spacious white background. The aesthetic is professional yet friendly, with mint green and lavender accents highlighting key metrics. Soft shadows provide a subtle sense of depth, creating a tactile and squishy UI feel that is both functional and beautiful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCox5z9eFpxlxiUh3N2iH4UK21vYssNLycPS69CbBbhCwsCqDUJXM6UtaZRzrT_0QUkklQqP4z4LRAvAGGbwlxLpAhFAtv9N-VWlvuaI-vPZnLD7jEiX9eq7qUdJLi6eLh6aJ4vwxw5pCfbIu0QIrqqupqOlJvKbBnx-0RpksvGMi60DItf808NlJ7v8b6ldo__Cmr7QJtK3pQXBWBuM_Q7bx8WBR_k83qLfhNz9ti03OLwbPsfLD-yDza7y_cEctDqBOmty0tJK6I"/>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Analytics Dashboard</h3>
+<p class="text-on-surface-variant mb-4">複雑なデータを分かりやすく可視化する管理画面。ReactとD3.jsを使用して実装しました。</p>
+<div class="flex gap-2">
+<span class="text-code text-primary font-bold">#React</span>
+<span class="text-code text-primary font-bold">#TypeScript</span>
+<span class="text-code text-primary font-bold">#D3.js</span>
+</div>
+</div>
+<div class="group cursor-pointer">
+<div class="rounded-xl overflow-hidden neo-soft mb-6 aspect-video">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cozy and minimalist e-commerce storefront landing page. The design uses a sophisticated color palette of soft pink and warm off-white. Product images are displayed in cards with extreme 48px corner radius and neomorphic shadows. The lighting is soft and diffuse, highlighting the tactile quality of the UI elements. The overall atmosphere is calm, welcoming, and high-trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEyHU7qErM8pUKsDeojIxjksObAUZRbSjL2EMIy_dTcTSbwMmJdQK7K3AW2juGgZWc2MjJvk3nPAfrCTHf5pW7pV4RXoIcq5jRc_FoJ3CGz2DEk8E4H1OoVWjmF8rPF1C4xwYhsvKr88-gsErKgFIF9yIh1dTv0Aa_iHZYBBKjVI57BoQD516OHWWAlOZFj2aO2D7Z6UuxkfKqiIv__M1CMXu0EyuLGdTXhiClHsq9i28mr97PA2pheynEbJoTmhuzS36uWaHvQlw"/>
+</div>
+<h3 class="font-h3 text-h3 mb-2">Kawaii EC Store</h3>
+<p class="text-on-surface-variant mb-4">モバイルファーストなECプラットフォーム。Next.jsとShopify APIを統合し、高速な購買体験を実現。</p>
+<div class="flex gap-2">
+<span class="text-code text-primary font-bold">#Next.js</span>
+<span class="text-code text-primary font-bold">#Shopify</span>
+<span class="text-code text-primary font-bold">#Tailwind</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24" id="experience">
+<h2 class="font-h2 text-h2 text-on-surface mb-16 text-center">経歴</h2>
+<div class="max-w-2xl mx-auto space-y-12">
+<div class="relative pl-12 border-l-4 border-primary-container">
+<div class="absolute -left-3 top-0 w-5 h-5 bg-primary-container rounded-full border-4 border-white shadow-sm"></div>
+<div class="text-label-caps font-bold text-primary mb-2">2022 - PRESENT</div>
+<h3 class="font-h3 text-h3 mb-2">Software Engineer @ Innovative Startups</h3>
+<p class="text-on-surface-variant">
+                        フロントエンドのリードエンジニアとして、大規模なSPAの設計・開発を担当。デザインシステムの構築から開発効率の向上に貢献。
+                    </p>
+</div>
+<div class="relative pl-12 border-l-4 border-secondary-container">
+<div class="absolute -left-3 top-0 w-5 h-5 bg-secondary-container rounded-full border-4 border-white shadow-sm"></div>
+<div class="text-label-caps font-bold text-secondary mb-2">2019 - 2022</div>
+<h3 class="font-h3 text-h3 mb-2">Fullstack Engineer @ Tech Solutions</h3>
+<p class="text-on-surface-variant">
+                        受託開発案件において、要件定義からデプロイまで一貫して担当。主にNode.jsとReactを用いた基幹システムの開発に従事。
+                    </p>
+</div>
+<div class="relative pl-12 border-l-4 border-tertiary-container">
+<div class="absolute -left-3 top-0 w-5 h-5 bg-tertiary-container rounded-full border-4 border-white shadow-sm"></div>
+<div class="text-label-caps font-bold text-tertiary mb-2">2017 - 2019</div>
+<h3 class="font-h3 text-h3 mb-2">Systems Engineer @ Global SIer</h3>
+<p class="text-on-surface-variant">
+                        Javaを用いた銀行基幹システムの保守・運用を担当。品質管理とセキュアなコーディングの基礎を学ぶ。
+                    </p>
+</div>
+</div>
+</section>
+<section class="py-24 mb-24" id="contact">
+<div class="bg-white rounded-xl p-12 neo-soft max-w-3xl mx-auto">
+<h2 class="font-h2 text-h2 text-on-surface mb-8 text-center">お問い合わせ</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-label-caps font-bold text-on-surface-variant mb-2">お名前</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 neo-soft-inset focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="山田 太郎" type="text"/>
+</div>
+<div>
+<label class="block text-label-caps font-bold text-on-surface-variant mb-2">メールアドレス</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 neo-soft-inset focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="example@techarchive.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-label-caps font-bold text-on-surface-variant mb-2">件名</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 neo-soft-inset focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="お仕事のご相談など" type="text"/>
+</div>
+<div>
+<label class="block text-label-caps font-bold text-on-surface-variant mb-2">メッセージ</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-4 neo-soft-inset focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="メッセージを入力してください" rows="5"></textarea>
+</div>
+<div class="text-center">
+<button class="bg-primary text-on-primary px-12 py-4 rounded-full font-bold neo-soft hover:scale-105 active:scale-95 transition-all" type="submit">送信する</button>
+</div>
+</form>
+<div class="mt-12 pt-12 border-t border-surface-container flex justify-center gap-8">
+<a class="w-12 h-12 flex items-center justify-center bg-white rounded-full neo-soft hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">link</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-white rounded-full neo-soft hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center bg-white rounded-full neo-soft hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-slate-950 w-full py-12 px-6 border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-bold text-white font-label-caps">SYSTEM_OPERATOR</div>
+<div class="flex gap-8">
+<a class="text-slate-500 font-label-caps hover:text-white transition-colors cursor-pointer" href="#">Github</a>
+<a class="text-slate-500 font-label-caps hover:text-white transition-colors cursor-pointer" href="#">Linkedin</a>
+<a class="text-slate-500 font-label-caps hover:text-white transition-colors cursor-pointer" href="#">Terminal</a>
+</div>
+<div class="text-slate-500 font-label-caps text-xs tracking-widest uppercase">
+                © 2024 SYSTEM_OPERATOR. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

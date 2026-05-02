@@ -1,0 +1,96 @@
+/* Projectsセクションのスタイル */
+.section {
+  padding: var(--space-xl) var(--gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* サムネイルエリア */
+.thumbnail {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-primary-container) 0%, var(--color-tertiary-container) 100%);
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* プレースホルダーサムネイル */
+.thumbnailPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.thumbnailMint {
+  background: linear-gradient(135deg, var(--color-secondary-container) 0%, #e8f8ea 100%);
+}
+
+.thumbnailLavender {
+  background: linear-gradient(135deg, var(--color-tertiary-container) 0%, #f0ecff 100%);
+}
+
+/* カードコンテンツ */
+.content {
+  padding: 24px;
+}
+
+.title {
+  font-family: var(--font-main);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-unit);
+}
+
+.description {
+  font-size: var(--text-body-md);
+  color: var(--color-text-sub);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-md);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-unit);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

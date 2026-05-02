@@ -1,0 +1,29 @@
+/* Badgeコンポーネントのスタイル */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-code);
+  font-size: var(--text-code);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.05em;
+}
+
+/* pink: ピンク系 */
+.pink {
+  background-color: rgba(255, 209, 220, 0.3);
+  color: var(--color-on-primary-container);
+}
+
+/* mint: ミント緑系 */
+.mint {
+  background-color: rgba(178, 242, 187, 0.3);
+  color: var(--color-on-secondary-container);
+}
+
+/* lavender: ラベンダー系 */
+.lavender {
+  background-color: rgba(225, 216, 255, 0.3);
+  color: var(--color-on-tertiary-container);
+}
