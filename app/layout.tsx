@@ -20,9 +20,13 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Software Engineer Portfolio',
-  description:
-    '技術の力で、毎日の生活を少しだけ「楽しく」「便利に」するソフトウェアエンジニアのポートフォリオサイトです。',
+  title: 'Ruka Kawahara | Frontend Engineer',
+  description: 'フロントエンドエンジニアとして、デザイン通りの保守性の高いコードが書けるように心がけています。',
+  openGraph: {
+    title: 'Ruka Kawahara | Frontend Engineer',
+    description: 'フロントエンドエンジニアとして、デザイン通りの保守性の高いコードが書けるように心がけています。',
+    images: [{ url: '/images/kawahara_icon.png' }],
+  },
 };
 
 export default function RootLayout({
