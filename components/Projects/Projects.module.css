@@ -22,6 +22,7 @@
 
 .card:hover {
   box-shadow: var(--shadow-card-hover);
+  transform: translateY(-6px);
 }
 
 /* サムネイルエリア */
@@ -36,6 +37,10 @@
 .thumbnailImage {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+.ogpImage {
   object-fit: cover;
 }
 

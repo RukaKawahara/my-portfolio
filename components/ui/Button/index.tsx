@@ -7,6 +7,7 @@ type ButtonProps = {
   size?: 'md' | 'lg';
   href?: string;
   type?: 'button' | 'submit';
+  disabled?: boolean;
   children: React.ReactNode;
   onClick?: () => void;
 };
@@ -16,6 +17,7 @@ export default function Button({
   size = 'md',
   href,
   type = 'button',
+  disabled = false,
   children,
   onClick,
 }: ButtonProps) {
@@ -31,7 +33,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} className={className} onClick={onClick}>
+    <button type={type} className={className} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

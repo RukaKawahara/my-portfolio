@@ -16,11 +16,6 @@
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
   padding: 32px;
-  transition: box-shadow 0.2s ease;
-}
-
-.card:hover {
-  box-shadow: var(--shadow-card-hover);
 }
 
 .iconWrap {

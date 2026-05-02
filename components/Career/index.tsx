@@ -13,6 +13,7 @@ export default function Career() {
             <div className={styles.dot} />
             <p className={styles.period}>{career.period}</p>
             <h3 className={styles.jobTitle}>{career.title}</h3>
+            <p className={styles.company}>{career.company}</p>
             <p className={styles.description}>{career.description}</p>
           </div>
         ))}

@@ -78,6 +78,37 @@
   padding-top: 8px;
 }
 
+/* フォームラッパー（Coming Soon オーバーレイ用） */
+.formWrap {
+  position: relative;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  padding: 48px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  user-select: none;
+}
+
+.comingSoonBadge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-container);
+  color: var(--color-primary);
+  font-family: var(--font-code);
+  font-size: var(--text-code);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
 /* SNSアイコンエリア */
 .social {
   margin-top: var(--space-lg);

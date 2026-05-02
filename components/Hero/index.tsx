@@ -1,7 +1,9 @@
 /* Heroセクションコンポーネント */
+import Image from 'next/image';
+import { FiSmile } from 'react-icons/fi';
 import Badge from '@/components/ui/Badge';
 import Button from '@/components/ui/Button';
-import { siteInfo } from '@/data/portfolio';
+import { siteInfo, profile } from '@/data/portfolio';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -9,7 +11,10 @@ export default function Hero() {
     <section id="hero" className={styles.section}>
       {/* 左側：テキストエリア */}
       <div className={styles.content}>
-        <Badge label="WELCOME TO MY PORTFOLIO" color="mint" />
+        <div className={styles.heroBadge}>
+          <FiSmile size={16} />
+          WELCOME TO MY PORTFOLIO
+        </div>
         <h1 className={styles.heading}>
           {siteInfo.heroHeading}
           <br />
@@ -32,8 +37,14 @@ export default function Hero() {
         <div className={styles.imageWrapper}>
           <div className={styles.imageDecoPink} />
           <div className={styles.imageDecoLavender} />
-          {/* プレースホルダー：実際の写真に差し替え可能 */}
-          <div className={styles.imagePlaceholder}>👨‍💻</div>
+          <Image
+            src={profile.avatarUrl}
+            alt={profile.name}
+            width={320}
+            height={320}
+            className={styles.profileImage}
+            priority
+          />
         </div>
       </div>
     </section>

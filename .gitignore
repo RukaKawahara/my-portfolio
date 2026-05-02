@@ -34,3 +34,4 @@ data/portfolio.ts
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+.vercel

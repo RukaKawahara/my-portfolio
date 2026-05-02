@@ -3,9 +3,9 @@ import { siteInfo } from '@/data/portfolio';
 import styles from './Navbar.module.css';
 
 const navItems = [
+  { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Career', href: '#career' },
-  { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
 ];
 
@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
-        <span className={styles.logo}>{siteInfo.name}</span>
+        <a href="#hero" className={styles.logo}>{siteInfo.name}</a>
         <div className={styles.links}>
           {navItems.map((item) => (
             <a key={item.href} href={item.href} className={styles.link}>

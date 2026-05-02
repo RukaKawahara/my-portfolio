@@ -9,10 +9,8 @@
   max-width: var(--container-max);
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  gap: var(--space-md);
 }
 
 .logo {
@@ -48,7 +46,7 @@
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #6b7280;
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {

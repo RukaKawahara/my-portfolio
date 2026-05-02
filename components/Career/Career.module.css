@@ -54,10 +54,10 @@
 }
 
 .mint .dot {
-  background-color: var(--color-secondary-container);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 .mint::before {
-  background-color: var(--color-secondary-container);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 .lavender .dot {
@@ -80,7 +80,7 @@
   color: var(--color-primary);
 }
 .mint .period {
-  color: var(--color-secondary);
+  color: var(--color-text-sub);
 }
 .lavender .period {
   color: var(--color-tertiary);
@@ -92,6 +92,13 @@
   font-weight: var(--weight-bold);
   line-height: var(--lh-h3);
   color: var(--color-text);
+  margin-bottom: var(--space-unit);
+}
+
+.company {
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-sub);
   margin-bottom: var(--space-unit);
 }
 

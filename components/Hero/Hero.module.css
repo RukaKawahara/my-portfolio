@@ -17,6 +17,25 @@
   gap: var(--space-md);
 }
 
+.heroBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-main);
+  font-size: var(--text-body-md);
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  width: fit-content;
+}
+
+.heroBadgeDot {
+  font-size: 10px;
+  font-style: normal;
+  opacity: 0.5;
+}
+
 .heading {
   font-family: var(--font-main);
   font-size: var(--text-h1);
