@@ -36,7 +36,7 @@
 
 .link {
   font-family: var(--font-code);
-  font-size: var(--text-label);
+  font-size: var(--text-body-md);
   font-weight: var(--weight-bold);
   letter-spacing: 0.1em;
   color: var(--color-text-sub);
@@ -146,6 +146,10 @@
 @media (max-width: 768px) {
   .links {
     display: none;
+  }
+
+  .drawerLink {
+    font-size: var(--text-label);
   }
 
   .hamburger {

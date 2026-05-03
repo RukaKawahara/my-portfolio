@@ -72,7 +72,7 @@
 
 .featureLabel {
   font-family: var(--font-main);
-  font-size: 12px;
+  font-size: var(--text-body-md);
   font-weight: var(--weight-bold);
   color: var(--color-text);
   overflow-wrap: break-word;
@@ -94,5 +94,9 @@
 
   .featureCard {
     padding: 16px 12px;
+  }
+
+  .featureLabel {
+    font-size: var(--text-label);
   }
 }
