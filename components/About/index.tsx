@@ -1,14 +1,6 @@
 /* Aboutセクションコンポーネント */
-import { siteInfo } from '@/data/portfolio';
+import { siteInfo, features } from '@/data/portfolio';
 import styles from './About.module.css';
-
-/* 特徴カードデータ */
-const features = [
-  { label: 'Clean Code' },
-  { label: 'Design Sense' },
-  { label: 'Communication' },
-  { label: 'Growth' },
-];
 
 export default function About() {
   return (

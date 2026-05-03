@@ -55,10 +55,10 @@ export const profile = {
 // 特徴カード（Aboutセクション）
 // ===========================
 export const features = [
-  { icon: "✨", label: "Clean Code", desc: "読みやすく保守しやすいコードを意識します" },
-  { icon: "🎨", label: "Modern UI", desc: "デザインにこだわったUI実装が得意です" },
-  { icon: "🤝", label: "Team Player", desc: "チームでの開発経験を大切にしています" },
-  { icon: "🌱", label: "Growth", desc: "新技術のキャッチアップを欠かしません" },
+  { label: "Clean Code" },
+  { label: "Modern UI" },
+  { label: "Team Player" },
+  { label: "Growth" },
 ];
 
 // ===========================
