@@ -1,0 +1,62 @@
+/* Qualificationsセクションのスタイル */
+.section {
+  padding: var(--space-xl) var(--gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.item {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  align-items: flex-start;
+}
+
+.left {
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.year {
+  font-family: var(--font-code);
+  font-size: var(--text-label);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  font-family: var(--font-main);
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  line-height: var(--lh-body);
+}
+
+.issuer {
+  font-size: var(--text-code);
+  color: var(--color-text-sub);
+}
+
+@media (max-width: 768px) {
+  .item {
+    gap: var(--space-md);
+  }
+}
