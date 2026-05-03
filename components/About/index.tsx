@@ -1,14 +1,13 @@
 /* Aboutセクションコンポーネント */
-import { FiCode, FiEye, FiMessageCircle, FiTrendingUp } from 'react-icons/fi';
 import { siteInfo } from '@/data/portfolio';
 import styles from './About.module.css';
 
 /* 特徴カードデータ */
 const features = [
-  { icon: FiCode, label: 'Clean Code', color: 'var(--color-primary)' },
-  { icon: FiEye, label: 'Design Sense', color: 'var(--color-secondary)' },
-  { icon: FiMessageCircle, label: 'Communication', color: 'var(--color-tertiary)' },
-  { icon: FiTrendingUp, label: 'Growth', color: 'var(--color-on-primary-container)' },
+  { label: 'Clean Code' },
+  { label: 'Design Sense' },
+  { label: 'Communication' },
+  { label: 'Growth' },
 ];
 
 export default function About() {
@@ -29,7 +28,6 @@ export default function About() {
         <div className={styles.cardGrid}>
           {features.map((f) => (
             <div key={f.label} className={styles.featureCard}>
-              <f.icon size={24} className={styles.featureIcon} style={{ color: f.color }} />
               <span className={styles.featureLabel}>{f.label}</span>
             </div>
           ))}

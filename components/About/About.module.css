@@ -66,10 +66,6 @@
   min-width: 0; /* グリッドアイテムがコンテンツ幅以下に縮めるよう設定 */
 }
 
-.featureIcon {
-  font-size: 36px;
-}
-
 .featureLabel {
   font-family: var(--font-main);
   font-size: var(--text-body-md);

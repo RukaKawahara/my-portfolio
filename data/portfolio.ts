@@ -66,7 +66,7 @@ export const skills = {
     items: ["Node.js（学習中）"],
   },
   infra: {
-    items: ["Supabase", "Vercel", "Git", "GitHub", "Figma", "AI開発"],
+    items: ["Supabase", "firebase", "Vercel", "Git", "GitHub", "Figma", "AI開発"],
   }
 };
 
@@ -79,7 +79,7 @@ export const projects = [
     title: "レシピメモアプリ",
     description:
       "レシピの作成・編集・削除、お気に入り機能、ジャンル管理ができるレシピ管理アプリ。Next.js + Supabaseで構築し、Vercelにデプロイ済み。",
-    tags: ["Next.js", "TypeScript", "SCSS", "Supabase"],
+    tags: ["Next.js", "TypeScript", "SCSS", "Supabase", "Vercel", "AI開発"],
     tagColor: "gray" as const,
     githubUrl: "https://github.com/RukaKawahara/memo-recipe-app",
     liveUrl: "https://memo-recipe-app.vercel.app",
@@ -90,7 +90,7 @@ export const projects = [
     title: "コーディング練習（HTML&CSS プラクティスブック）",
     description:
       "「HTML&CSS コーディング・プラクティスブック 1」付属のデザインカンプ通りに実装。ピクセルパーフェクトな再現を意識して制作。",
-    tags: ["Astro", "SCSS", "TypeScript", "JavaScript"],
+    tags: ["Astro", "SCSS", "TypeScript", "JavaScript", "Vercel"],
     tagColor: "gray" as const,
     githubUrl: "",
     liveUrl: "https://1-git-main-rukas-projects-10c7bfda.vercel.app/",
@@ -108,7 +108,7 @@ export const careers = [
     company: "株式会社ニジボックス",
     title: "Frontend Engineer",
     period: "2023 - 現在",
-    description: "マークアップ、jsでのエンハンス、保守業務をはじめ、Nextを用いたモダン開発を用いたプロジェクトにもアサイン",
+    description: "マークアップ、jsでのエンハンス、保守業務をはじめ、Nextを用いたモダン開発を用いたプロジェクトにもアサイン。",
   },
   {
     id: 2,
