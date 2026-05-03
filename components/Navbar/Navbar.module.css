@@ -27,6 +27,7 @@
   letter-spacing: 0.1em;
 }
 
+/* PC用ナビリンク */
 .links {
   display: flex;
   align-items: center;
@@ -50,9 +51,102 @@
   background-color: var(--color-primary-container);
 }
 
-/* モバイルではリンクを非表示 */
+/* ハンバーガーボタン */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease;
+}
+
+.hamburger:hover {
+  background-color: var(--color-primary-container);
+}
+
+.bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* ×アイコン（開いているとき） */
+.hamburgerOpen .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburgerOpen .bar:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburgerOpen .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* SP用ドロワーメニュー */
+.drawer {
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-top: 1px solid var(--color-outline-variant);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.drawerOpen {
+  max-height: 400px;
+}
+
+.drawerLink {
+  font-family: var(--font-code);
+  font-size: var(--text-body-md);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.1em;
+  color: var(--color-text-sub);
+  text-transform: uppercase;
+  padding: 16px var(--gutter);
+  border-bottom: 1px solid var(--color-outline-variant);
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.drawerLink:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-container);
+}
+
+/* オーバーレイ（メニュー背面を固定・グレーで覆う） */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 40;
+}
+
+/* SP（768px以下）レスポンシブ */
 @media (max-width: 768px) {
   .links {
     display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .drawer {
+    display: flex;
   }
 }

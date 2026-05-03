@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { FiSmile } from 'react-icons/fi';
 import Badge from '@/components/ui/Badge';
-import Button from '@/components/ui/Button';
 import { siteInfo, profile } from '@/data/portfolio';
 import styles from './Hero.module.css';
 
@@ -22,14 +21,6 @@ export default function Hero() {
           {siteInfo.heroSuffix}
         </h1>
         <p className={styles.description}>{siteInfo.description}</p>
-        <div className={styles.buttons}>
-          <Button href="#projects" variant="primary" size="lg">
-            プロジェクトを見る
-          </Button>
-          <Button href="#contact" variant="secondary" size="lg">
-            お問い合わせ
-          </Button>
-        </div>
       </div>
 
       {/* 右側：プロフィール写真エリア */}
