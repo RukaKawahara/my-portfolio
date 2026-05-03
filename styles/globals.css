@@ -36,6 +36,11 @@ a {
   text-decoration: none;
 }
 
+/* sticky headerの高さ分、アンカーリンクのスクロール位置を補正 */
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
 ul,
 ol {
   list-style: none;

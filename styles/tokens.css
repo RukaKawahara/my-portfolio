@@ -55,6 +55,7 @@
   --space-xl: 60px;
   --container-max: 1140px;
   --gutter: 24px;
+  --header-height: 64px;
 
   /* Radius */
   --radius-sm: 0.5rem;
