@@ -24,6 +24,16 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
+  /* ドロワーリンククリック：先にメニューを閉じ、トランジション完了後にスクロール */
+  const handleDrawerLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    closeMenu();
+    setTimeout(() => {
+      const target = document.querySelector(href);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -59,7 +69,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               className={styles.drawerLink}
-              onClick={closeMenu}
+              onClick={(e) => handleDrawerLinkClick(e, item.href)}
             >
               {item.label}
             </a>
