@@ -1,6 +1,6 @@
 /* Aboutセクションのスタイル */
 .section {
-  padding: var(--space-xl) var(--gutter);
+  padding: var(--space-lg) var(--gutter);
   max-width: var(--container-max);
   margin: 0 auto;
 }
