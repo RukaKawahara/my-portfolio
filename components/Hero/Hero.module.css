@@ -24,7 +24,6 @@
   font-family: var(--font-main);
   font-size: var(--text-body-md);
   font-weight: 700;
-  font-style: italic;
   letter-spacing: 0.08em;
   color: var(--color-text);
   width: fit-content;

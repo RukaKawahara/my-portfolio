@@ -12,7 +12,7 @@ export default function Hero() {
       <div className={styles.content}>
         <div className={styles.heroBadge}>
           <FiSmile size={16} />
-          WELCOME TO MY PORTFOLIO
+          WELCOME TO MY PORTFOLIO!
         </div>
         <h1 className={styles.heading}>
           {siteInfo.heroHeading}
