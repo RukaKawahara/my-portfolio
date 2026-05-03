@@ -133,10 +133,12 @@
   color: var(--color-text-sub);
 }
 
-.socialLink:hover {
-  box-shadow: var(--shadow-card-hover);
-  color: var(--color-primary);
-  transform: scale(1.05);
+@media (hover: hover) {
+  .socialLink:hover {
+    box-shadow: var(--shadow-card-hover);
+    color: var(--color-primary);
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 640px) {

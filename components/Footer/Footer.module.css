@@ -37,8 +37,10 @@
   transition: color 0.2s ease;
 }
 
-.link:hover {
-  color: #ffffff;
+@media (hover: hover) {
+  .link:hover {
+    color: #ffffff;
+  }
 }
 
 .copy {

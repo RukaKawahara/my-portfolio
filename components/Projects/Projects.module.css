@@ -20,9 +20,11 @@
   cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: var(--shadow-card-hover);
-  transform: translateY(-6px);
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-6px);
+  }
 }
 
 /* サムネイルエリア */

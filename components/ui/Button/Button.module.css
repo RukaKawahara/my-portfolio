@@ -13,8 +13,10 @@
   white-space: nowrap;
 }
 
-.button:hover {
-  transform: scale(1.05);
+@media (hover: hover) {
+  .button:hover {
+    transform: scale(1.05);
+  }
 }
 
 /* サイズ */
@@ -35,8 +37,10 @@
   box-shadow: var(--shadow-card);
 }
 
-.primary:hover {
-  box-shadow: var(--shadow-card-hover);
+@media (hover: hover) {
+  .primary:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
 }
 
 /* secondary: ラベンダーborder・透明背景 */
@@ -46,6 +50,8 @@
   border: 2px solid var(--color-tertiary);
 }
 
-.secondary:hover {
-  background-color: rgba(224, 216, 255, 0.2);
+@media (hover: hover) {
+  .secondary:hover {
+    background-color: rgba(224, 216, 255, 0.2);
+  }
 }
