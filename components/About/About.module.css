@@ -45,8 +45,10 @@
 /* 右側：特徴カードグリッド */
 .cardGrid {
   flex: 1;
+  align-self: stretch;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: var(--space-md);
 }
 
@@ -61,6 +63,7 @@
   justify-content: center;
   text-align: center;
   gap: 8px;
+  min-width: 0; /* グリッドアイテムがコンテンツ幅以下に縮めるよう設定 */
 }
 
 .featureIcon {
@@ -69,14 +72,27 @@
 
 .featureLabel {
   font-family: var(--font-main);
-  font-size: var(--text-body-md);
+  font-size: 12px;
   font-weight: var(--weight-bold);
   color: var(--color-text);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 @media (max-width: 768px) {
   .inner {
     flex-direction: column;
     padding: 32px 24px;
+  }
+
+  .cardGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-rows: 1fr;
+    gap: var(--space-sm);
+  }
+
+  .featureCard {
+    padding: 16px 12px;
   }
 }
