@@ -23,7 +23,7 @@ export default function Skills() {
         {skillCards.map((card) => (
           <div key={card.key} className={styles.card}>
             <div className={`${styles.iconWrap} ${card.iconClass}`}>
-              <card.icon size={24} />
+              <card.icon size={24} aria-hidden="true" />
             </div>
             <h3 className={styles.cardTitle}>{card.title}</h3>
             <div className={styles.badges}>
