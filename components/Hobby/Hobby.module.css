@@ -126,8 +126,18 @@
 }
 
 @media (max-width: 480px) {
+  .overlay {
+    padding: 0;
+  }
+
   .modal {
-    width: 98vw;
+    width: 100vw;
+    aspect-ratio: unset;
+    height: 100dvh;
+  }
+
+  .modalImageWrap {
+    border-radius: 0;
   }
 
   /* 矢印ボタン */
