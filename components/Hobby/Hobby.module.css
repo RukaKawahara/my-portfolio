@@ -82,7 +82,7 @@
 
 .modal {
   position: relative;
-  width: min(90vw, 800px);
+  width: min(92vw, 1000px);
   aspect-ratio: 1 / 1;
   animation: scaleIn 0.25s ease;
 }
@@ -126,6 +126,10 @@
 }
 
 @media (max-width: 480px) {
+  .modal {
+    width: 98vw;
+  }
+
   /* 矢印ボタン */
   .arrow {
     display: flex;
