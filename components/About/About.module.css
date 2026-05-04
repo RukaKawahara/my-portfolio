@@ -66,6 +66,13 @@
   min-width: 0; /* グリッドアイテムがコンテンツ幅以下に縮めるよう設定 */
 }
 
+.featureIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
 .featureLabel {
   font-family: var(--font-main);
   font-size: var(--text-body-md);

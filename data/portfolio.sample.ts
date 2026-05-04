@@ -3,6 +3,9 @@
 // cp data/portfolio.sample.ts data/portfolio.ts
 // ===========================
 
+import { FiCode, FiLayout, FiUsers, FiTrendingUp } from 'react-icons/fi';
+import type { IconType } from 'react-icons';
+
 // ===========================
 // サイト共通情報
 // ===========================
@@ -54,11 +57,11 @@ export const profile = {
 // ===========================
 // 特徴カード（Aboutセクション）
 // ===========================
-export const features = [
-  { label: "Clean Code" },
-  { label: "Modern UI" },
-  { label: "Team Player" },
-  { label: "Growth" },
+export const features: { label: string; icon: IconType }[] = [
+  { label: "Clean Code",   icon: FiCode       },
+  { label: "Modern UI",    icon: FiLayout     },
+  { label: "Team Player",  icon: FiUsers      },
+  { label: "Growth",       icon: FiTrendingUp },
 ];
 
 // ===========================

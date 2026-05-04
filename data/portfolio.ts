@@ -1,3 +1,6 @@
+import { FiCode, FiPenTool, FiUsers, FiTrendingUp } from 'react-icons/fi';
+import type { IconType } from 'react-icons';
+
 // ===========================
 // サイト共通情報
 // ===========================
@@ -48,11 +51,11 @@ export const profile = {
 // ===========================
 // 特徴カード（Aboutセクション）
 // ===========================
-export const features = [
-  { label: 'Clean Code' },
-  { label: 'Design Sense' },
-  { label: 'Communication' },
-  { label: 'Growth' },
+export const features: { label: string; icon: IconType }[] = [
+  { label: 'Clean Code',    icon: FiCode       },
+  { label: 'Design Sense',  icon: FiPenTool    },
+  { label: 'Communication', icon: FiUsers      },
+  { label: 'Growth',        icon: FiTrendingUp },
 ];
 
 // ===========================

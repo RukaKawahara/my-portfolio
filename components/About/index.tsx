@@ -20,6 +20,7 @@ export default function About() {
         <div className={styles.cardGrid}>
           {features.map((f) => (
             <div key={f.label} className={styles.featureCard}>
+              <f.icon className={styles.featureIcon} />
               <span className={styles.featureLabel}>{f.label}</span>
             </div>
           ))}
