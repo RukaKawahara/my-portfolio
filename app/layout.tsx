@@ -22,6 +22,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: 'Ruka Kawahara | Frontend Engineer',
   description: 'フロントエンドエンジニアとして、デザイン通りの保守性の高いコードが書けるように心がけています。',
+  icons: {
+    apple: '/images/kawahara_icon.png',
+  },
   openGraph: {
     title: 'Ruka Kawahara | Frontend Engineer',
     description: 'フロントエンドエンジニアとして、デザイン通りの保守性の高いコードが書けるように心がけています。',
