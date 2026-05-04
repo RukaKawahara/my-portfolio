@@ -6,6 +6,7 @@ import Skills from '@/components/Skills';
 import Projects from '@/components/Projects';
 import Career from '@/components/Career';
 import Qualifications from '@/components/Qualifications';
+import Hobby from '@/components/Hobby';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -20,6 +21,7 @@ export default function Page() {
         <Projects />
         <Career />
         <Qualifications />
+        <Hobby />
         <Contact />
       </main>
       <Footer />

@@ -1,0 +1,196 @@
+/* Hobbyセクションのスタイル */
+.section {
+  padding: var(--space-xl) var(--gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* セクション内コンテンツのパディング */
+.wrapper {
+  padding: 0 var(--gutter);
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* カルーセルラッパー（PC では通常のdiv） */
+.carouselWrap {
+  position: relative;
+}
+
+/* 矢印ボタン（PC では非表示） */
+.arrow {
+  display: none;
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+/* ドットインジケーター（PC では非表示） */
+.dots {
+  display: none;
+}
+
+/* 正方形に保つ・buttonリセット */
+.item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+@media (hover: hover) {
+  .item:hover .image {
+    transform: scale(1.04);
+  }
+}
+
+/* アニメーション定義 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* モーダルオーバーレイ */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: var(--space-md);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal {
+  position: relative;
+  width: min(90vw, 800px);
+  aspect-ratio: 1 / 1;
+  animation: scaleIn 0.25s ease;
+}
+
+.modalImageWrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--color-footer-text);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.modalImage {
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    max-width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* 矢印ボタン */
+  .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    border: none;
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    color: var(--color-text);
+    cursor: pointer;
+  }
+
+.arrowLeft  { left: 8px; }
+  .arrowRight { right: 8px; }
+
+  /* カルーセルレイアウト */
+  .grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 0;
+    /* スクロールバーを非表示 */
+    scrollbar-width: none;
+  }
+
+  .grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .item {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  /* ドットインジケーターを表示 */
+  .dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: var(--space-md);
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-outline-variant);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease, width 0.2s ease;
+  }
+
+  .dotActive {
+    background-color: var(--color-primary);
+    width: 20px;
+  }
+}
