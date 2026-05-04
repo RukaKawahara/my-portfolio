@@ -35,16 +35,16 @@ export default function Contact() {
         subtitle="お気軽にご連絡ください"
       />
       <div className={styles.formWrap}>
-        <form className={styles.form} onSubmit={handleSubmit} noValidate>
+        <form className={styles.form} onSubmit={handleSubmit}>
           {/* お名前・メールアドレス */}
           <div className={styles.row}>
             <div className={styles.field}>
               <label className={styles.label} htmlFor="name">お名前</label>
-              <input ref={nameRef} id="name" name="name" type="text" className={styles.input} placeholder="山田 太郎" autoComplete="name" />
+              <input ref={nameRef} id="name" name="name" type="text" className={styles.input} placeholder="山田 太郎" autoComplete="name" required />
             </div>
             <div className={styles.field}>
               <label className={styles.label} htmlFor="email">メールアドレス</label>
-              <input ref={emailRef} id="email" name="email" type="email" className={styles.input} placeholder="example@mail.com" autoComplete="email" />
+              <input ref={emailRef} id="email" name="email" type="email" className={styles.input} placeholder="example@mail.com" autoComplete="email" required />
             </div>
           </div>
           {/* 件名 */}
@@ -55,7 +55,7 @@ export default function Contact() {
           {/* メッセージ */}
           <div className={styles.field}>
             <label className={styles.label} htmlFor="message">メッセージ</label>
-            <textarea ref={messageRef} id="message" name="message" className={styles.textarea} placeholder="メッセージを入力してください" rows={5} />
+            <textarea ref={messageRef} id="message" name="message" className={styles.textarea} placeholder="メッセージを入力してください" rows={5} required />
           </div>
           <div className={styles.submitArea}>
             <Button variant="primary" size="lg">送信する</Button>
