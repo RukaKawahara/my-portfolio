@@ -58,7 +58,7 @@ export default function Contact() {
             <textarea ref={messageRef} id="message" name="message" className={styles.textarea} placeholder="メッセージを入力してください" rows={5} required />
           </div>
           <div className={styles.submitArea}>
-            <Button variant="primary" size="lg">送信する</Button>
+            <Button variant="primary" size="lg" type="submit">送信する</Button>
           </div>
         </form>
       </div>
