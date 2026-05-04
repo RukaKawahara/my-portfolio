@@ -42,8 +42,6 @@ export const profile = {
   avatarUrl: "/images/kawahara_icon.png",
   sns: {
     github: "https://github.com/RukaKawahara",
-    linkedin: "", // ← あれば追加
-    twitter: "",  // ← あれば追加
   },
 };
 

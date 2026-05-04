@@ -47,8 +47,6 @@ export const profile = {
   avatarUrl: "/images/avatar.jpg",
   sns: {
     github: "https://github.com/your-username",
-    linkedin: "",
-    twitter: "",
   },
 };
 
