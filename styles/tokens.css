@@ -25,6 +25,12 @@
   --color-blue-container: #cce5ff;
   --color-on-blue-container: #1a5f8a;
 
+  /* Footer ダークテーマ用 */
+  --color-footer-bg: #1a1a1a;
+  --color-footer-text: #ffffff;
+  --color-footer-text-sub: #6b7280;
+  --color-footer-border: rgba(255, 255, 255, 0.05);
+
   /* Typography - next/font/googleで注入されるCSS変数を参照 */
   --font-main: var(--font-jakarta, 'Plus Jakarta Sans', sans-serif);
   --font-code: var(--font-grotesk, 'Space Grotesk', monospace);
