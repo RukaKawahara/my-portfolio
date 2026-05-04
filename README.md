@@ -16,6 +16,7 @@
 | Skills | フロントエンド・バックエンド・インフラのスキルセット |
 | Projects | 制作実績 |
 | Career | 職務経歴・タイムライン |
+| Hobby | AIイラストギャラリー（PC：グリッド / SP：カルーセル） |
 | Contact | お問い合わせフォーム |
 
 ## ローカル起動
@@ -38,6 +39,23 @@ cp .env.example .env.local
 | 変数名 | 説明 |
 |---|---|
 | `NEXT_PUBLIC_CONTACT_EMAIL` | お問い合わせフォームの送信先メールアドレス |
+
+## Hobby 画像の追加
+
+`public/images/hobby/` に画像ファイルを置くだけで Hobby セクションに自動反映されます。
+
+```
+public/
+  images/
+    hobby/
+      01.png
+      02.png
+      ...
+```
+
+- 対応形式：`.png` / `.jpg` / `.jpeg` / `.webp` / `.gif`
+- ファイル名の昇順で表示されます
+- フォルダが空の場合はセクション自体が非表示になります
 
 ## データのカスタマイズ
 
