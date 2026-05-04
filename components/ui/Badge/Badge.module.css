@@ -22,6 +22,12 @@
   color: var(--color-on-secondary-container);
 }
 
+/* blue: ブルー系 */
+.blue {
+  background-color: rgba(204, 229, 255, 0.3);
+  color: var(--color-on-blue-container);
+}
+
 /* lavender: ラベンダー系 */
 .lavender {
   background-color: rgba(225, 216, 255, 0.3);

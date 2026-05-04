@@ -7,30 +7,9 @@ import styles from './Skills.module.css';
 
 /* スキルカードの定義 */
 const skillCards = [
-  {
-    key: 'frontend',
-    title: 'Frontend',
-    icon: FiMonitor,
-    iconClass: styles.iconPink,
-    color: 'pink' as const,
-    items: skills.frontend.items,
-  },
-  {
-    key: 'backend',
-    title: 'Backend',
-    icon: FiDatabase,
-    iconClass: styles.iconMint,
-    color: 'mint' as const,
-    items: skills.backend.items,
-  },
-  {
-    key: 'infra',
-    title: 'Infra / Tool',
-    icon: FiServer,
-    iconClass: styles.iconLavender,
-    color: 'lavender' as const,
-    items: skills.infra.items,
-  },
+  { key: 'frontend', title: 'Frontend',    icon: FiMonitor,  iconClass: styles.iconPink,     ...skills.frontend },
+  { key: 'backend',  title: 'Backend',     icon: FiDatabase, iconClass: styles.iconBlue,     ...skills.backend  },
+  { key: 'infra',    title: 'Infra / Tool', icon: FiServer,  iconClass: styles.iconLavender, ...skills.infra    },
 ];
 
 export default function Skills() {

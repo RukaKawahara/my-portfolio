@@ -28,8 +28,7 @@ export const siteInfo = {
 // ===========================
 export const socialLinks = {
   github: "https://github.com/your-username",
-  linkedin: "",
-  x: "",
+  qiita: "",
 };
 
 // ===========================
@@ -67,14 +66,23 @@ export const features: { label: string; icon: IconType }[] = [
 // ===========================
 // スキル
 // ===========================
-export const skills = {
+export type SkillColor = 'pink' | 'mint' | 'lavender' | 'blue' | 'gray';
+
+export const skills: {
+  frontend: { color: SkillColor; items: string[] };
+  backend:  { color: SkillColor; items: string[] };
+  infra:    { color: SkillColor; items: string[] };
+} = {
   frontend: {
+    color: "pink",
     items: ["React", "Next.js", "TypeScript", "JavaScript", "SCSS", "CSS"],
   },
   backend: {
+    color: "blue",
     items: ["Node.js", "PostgreSQL"],
   },
   infra: {
+    color: "lavender",
     items: ["Git", "GitHub", "Vercel"],
   },
 };

@@ -52,6 +52,10 @@
   background-color: var(--color-secondary-container);
 }
 
+.iconBlue {
+  background-color: var(--color-blue-container);
+}
+
 .iconLavender {
   background-color: var(--color-tertiary-container);
 }

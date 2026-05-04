@@ -61,16 +61,25 @@ export const features: { label: string; icon: IconType }[] = [
 // ===========================
 // スキル
 // ===========================
-export const skills = {
+export type SkillColor = 'pink' | 'mint' | 'lavender' | 'blue' | 'gray';
+
+export const skills: {
+  frontend: { color: SkillColor; items: string[] };
+  backend:  { color: SkillColor; items: string[] };
+  infra:    { color: SkillColor; items: string[] };
+} = {
   frontend: {
-    items: ["React", "Next.js", "TypeScript", "JavaScript", "SCSS", "CSS"],
+    color: "pink",
+    items: ["React", "Next.js", "TypeScript", "JavaScript", "SCSS", "CSS", "JQuery"],
   },
   backend: {
+    color: "blue",
     items: ["Node.js（学習中）"],
   },
   infra: {
+    color: "lavender",
     items: ["Supabase", "firebase", "Vercel", "Git", "GitHub", "Figma", "AI開発"],
-  }
+  },
 };
 
 // ===========================

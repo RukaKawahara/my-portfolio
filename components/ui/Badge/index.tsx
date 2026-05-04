@@ -3,7 +3,7 @@ import styles from './Badge.module.css';
 
 type BadgeProps = {
   label: string;
-  color?: 'pink' | 'mint' | 'lavender' | 'gray';
+  color?: 'pink' | 'mint' | 'lavender' | 'blue' | 'gray';
 };
 
 export default function Badge({ label, color = 'pink' }: BadgeProps) {
