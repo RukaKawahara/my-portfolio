@@ -45,7 +45,6 @@ export const profile = {
     "デザインにもこだわりを持ち、〇〇を活用しながら開発しています。",
   ],
   avatarUrl: "/images/avatar.jpg",
-  email: "your@email.com",
   sns: {
     github: "https://github.com/your-username",
     linkedin: "",

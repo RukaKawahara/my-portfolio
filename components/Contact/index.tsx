@@ -13,31 +13,30 @@ export default function Contact() {
         subtitle="お気軽にご連絡ください"
       />
       <div className={styles.formWrap}>
-        <div className={styles.comingSoonBadge}>Coming Soon</div>
-        <form className={`${styles.form} ${styles.disabled}`} action="#" method="post">
+        <form className={styles.form} action={`mailto:${process.env.NEXT_PUBLIC_CONTACT_EMAIL}`} method="post" encType="text/plain">
           {/* お名前・メールアドレス */}
           <div className={styles.row}>
             <div className={styles.field}>
               <label className={styles.label} htmlFor="name">お名前</label>
-              <input id="name" name="name" type="text" className={styles.input} placeholder="山田 太郎" disabled />
+              <input id="name" name="name" type="text" className={styles.input} placeholder="山田 太郎" />
             </div>
             <div className={styles.field}>
               <label className={styles.label} htmlFor="email">メールアドレス</label>
-              <input id="email" name="email" type="email" className={styles.input} placeholder="example@mail.com" disabled />
+              <input id="email" name="email" type="email" className={styles.input} placeholder="example@mail.com" />
             </div>
           </div>
           {/* 件名 */}
           <div className={styles.field}>
             <label className={styles.label} htmlFor="subject">件名</label>
-            <input id="subject" name="subject" type="text" className={styles.input} placeholder="お仕事のご相談など" disabled />
+            <input id="subject" name="subject" type="text" className={styles.input} placeholder="お仕事のご相談など" />
           </div>
           {/* メッセージ */}
           <div className={styles.field}>
             <label className={styles.label} htmlFor="message">メッセージ</label>
-            <textarea id="message" name="message" className={styles.textarea} placeholder="メッセージを入力してください" rows={5} disabled />
+            <textarea id="message" name="message" className={styles.textarea} placeholder="メッセージを入力してください" rows={5} />
           </div>
           <div className={styles.submitArea}>
-            <Button variant="primary" size="lg" disabled>送信する</Button>
+            <Button variant="primary" size="lg">送信する</Button>
           </div>
         </form>
       </div>

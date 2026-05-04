@@ -40,7 +40,6 @@ export const profile = {
     "React・Next.jsを中心に、モダン開発を勉強しています。",
   ],
   avatarUrl: "/images/kawahara_icon.png",
-  email: "your@email.com", // ← 要変更
   sns: {
     github: "https://github.com/RukaKawahara",
     linkedin: "", // ← あれば追加
